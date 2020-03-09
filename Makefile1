@@ -1,0 +1,6 @@
+a.out:try.o f.o
+	gcc ty.o f.o
+try.o:try.c
+	gcc -c try.c
+f.o:f.c
+	gcc -c f.c
