@@ -33,11 +33,19 @@ OUTPUT :as per user's requriment.(switch cases)
 
 FILE STRUCTURE:
 1.txt, test.txt:input files
-function.c:THIS FILE CONTAINS FUNCTIONS OF : ADDATION,SUBTRACTION,MULTIPLATION,DISPLAY,TRACE,EDIT,TRANSPOSE AND CHECKING IF THE GIVEN MATRICES ARE EITHER SYMMETRIC,SKEW SYMMETRIC,IDEMPOTENT,NILPOTENT,IDENTITY,UPPER TRIANGULAR,LOWER TRIANGULAR OR NOT.
+function.c: THIS FILE CONTAINS FUNCTIONS OF ADDITION,SUBTRACTION,MULTIPLATION,DISPLAY,TRACE,EDIT,TRANSPOSE AND CHECKING IF THE GIVEN MATRICES ARE EITHER SYMMETRIC,SKEW SYMMETRIC,IDEMPOTENT,IDENTITY,UPPER TRIANGULAR,LOWER TRIANGULAR OR NOT.
 f.c:THIS FILE CONTAINS FUNCTION OF :ROW OPERATIONS,DETERMINANT,RANK,INVERSE.
 try.c:THIS FILE CONTAINS FUNCTION TO SOLVE SYSTEM OF LINEAR EQUATIONS.
 
-PROJECT DESCRIPTION:
+PROJECT DESCRIPTION:(1) The input is stored in 2-D arays whose storage is allocated using dynamic allocation.
+		    (2)To find rank of matrix first the matrix is converted to row echelon form and then the non-zero rows are counted.The no.of non-zero rows gives the                       rank of the matrix.
+		    (3) Inverse is found using elementary row operations.
+		    (4) To find determinant first the rank of the matrix is found. Then if the rank is equal to no. of rows/columns detrminant is calculated as product                         of the diagonal elements of the row echelon form and the elements with which we divided diagonal elements to make them equal to 1 in row echelon                        form.
+		    (5) To solve system of linear equations first they are converted in the form AX=B.
+		        if B=0 then if A is invertible we have trivial solution otherwise we have non-trivial solution.
+			if B!=0 then if A is invertible we get unique solution otherwise we either get multiple solutions when rank of A=m of we don't get any solution.                        Now the solutions are calculated by converting A into its row echelon form and by back substitution. 
+
+                     
 
        
  
