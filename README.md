@@ -23,10 +23,10 @@ INPUT :Input to this project is given using a text file on commandline.(test.txt
 
      Input for system of linear equations.(1.txt)(file) (input is taken by function automatically)
      [Sample Input in file shloud be give as below :
-       ex. +1x+3y+5z=-1
-           -1x-2y-5z=4
-           +0x+1y+1z=-1
-           +1x+4y+6z=-2
+       ex. +1.3x+3.4y+5.6z=-1.3
+           +2.5x-2.0y-5.0z=+4.2
+	   +0.0x+1.3y+1.1z=-1.4
+	   +0.7x+4.0y+6.9z=-2.7
      ]
 
 OUTPUT :as per user's requriment.(switch cases)
@@ -37,7 +37,7 @@ function.c:THIS FILE CONTAINS FUNCTIONS OF : ADDATION,SUBTRACTION,MULTIPLATION,D
 f.c:THIS FILE CONTAINS FUNCTION OF :ROW OPERATIONS,DETERMINANT,RANK,INVERSE.
 try.c:THIS FILE CONTAINS FUNCTION TO SOLVE SYSTEM OF LINEAR EQUATIONS.
 
-
+PROJECT DESCRIPTION:
 
        
  

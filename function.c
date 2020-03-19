@@ -134,39 +134,6 @@ void idempotent(int r,float **a)
     else
         printf("\t\t\t\t\t\t\t:NOT A IDENPOTENT MATRIX.\n");
 }
-
-//////NILPOTENT MATRIX                    
-void nilpotent(int r,float **a)
-{ int i,j,index=1;float g=0;
-    float **c=malloc(r*sizeof(float));
-    for(int i=0;i<r;i++)
-        c[i]=malloc(r*sizeof(float) );
-
-    mul(r,r,r,r,a,a,c);//calling multiplation function
-    for(int h=0;h<20;h++)
-    {for(i=0;i<r;i++)
-        {for(j=0;j<r;j++)
-            {if (c[i][j]!=g)//CHECKS ALL ENTRIES IN MATRIX ARE '0's'.
-                {index+=1;
-                    break;
-                }
-            }
-            if(j!=r)
-                break;
-        }
-        if(i!=r)
-            mul(r,r,r,r,c,a,c);//CALLING MULTIPLATION FUNCTION.
-        else
-        { ++index;
-            break;
-        }
-    }
-    if (index!=1)
-        printf("\t\t\t\t\t\t\t:INDEX OF A NILPOTENT MATRIX : %d \n",index);
-    else
-        printf("\t\t\t\t\t\t\t:NOT A NILPOTENT MATRIX \n");
-}
-
 ///// IDENTITY MATRIX
 void identity(int r,int c,float **a)
 { int i,j;

@@ -168,7 +168,7 @@ void main(int argc,char *argv[])
                 Display(r2,c2,b);
                 printf("\t\t\tENTER WHICH MATRIX(1st or 2nd) TO EDIT :");
                 scanf("%d",&c);
-                printf("\t\t\tENTER THE POISTION ROW AND COL OF THE ELEMENT :");
+                printf("\t\t\tENTER THE ROW AND COL AND THE ELEMENT :");
                 scanf("%d %d %f",&r,&d,&e);
                 if (c==1)
                     edit(r,d,a,e);
@@ -226,7 +226,6 @@ void main(int argc,char *argv[])
             else
             {   
                 idempotent(r1,a);
-                nilpotent(r1,a);
                 up_triangle(r1,c1,a);
                 lower_triangle(r1,c1,a);
                 identity(r1,c1,a);
@@ -239,7 +238,6 @@ void main(int argc,char *argv[])
                 printf("GIVEN MATRIX IS NOT SQUARE MATRIX.");
             else
             {   idempotent(r2,b);
-                nilpotent(r2,b);
                 up_triangle(r2,c2,b);
                 lower_triangle(r2,c2,b);
                 identity(r2,c2,b);

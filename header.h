@@ -17,9 +17,7 @@ void edit(int r1,int c1,float **,float x );
 void symmetric(int r ,int c ,float **);
 void skew_symmetric(int r ,int c,float **);
 void idempotent(int r ,float **);
-void nilpotent(int r,float **);
 void identity(int r,int c,float **);
 void up_triangle(int r,int c,float **);
 void lower_triangle(int r,int c,float **);
 void solve();
-
