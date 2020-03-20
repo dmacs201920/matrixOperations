@@ -224,7 +224,7 @@ void main(int argc,char *argv[])
                             sb[z][y]=1;
                     }
                 inverse(r2,b,sb);
-		Dispaly(r2,c2,sb);
+		Display(r2,c2,sb);
 	    }
             break;
             case 12://sys
