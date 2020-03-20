@@ -80,12 +80,7 @@ void main(int argc,char *argv[])
             if(apos==1)
             {add(r1,c1,a,b,ad);
                 printf("\t\t\tANSWER FOR MATRIX ADDITION\n");
-                for (int i=0,j;i<r1;i++) 
-                {  printf("\n");
-                    for (j=0;j<c1;j++)
-                        printf("\t\t\t%f ",ad[i][j]);
-                }
-                printf("\n");
+		Display(r1,c1,ad);
             }
             break;
             case 2://////////SUBTRACTION OF MATRICES.
@@ -96,13 +91,8 @@ void main(int argc,char *argv[])
             if(spos==1)
             {sub(r1,c1,a,b,sb);
                 printf("\t\t\tANSWER FOR MATRIX SUBTRACTION\n");
-                for (int i=0,j;i<r1;i++) 
-                {  printf("\n");
-                    for (j=0;j<c1;j++)
-                        printf("\t\t\t%f ",sb[i][j]);
-                }
-                printf("\n");
-            }
+		Display(r2,c2,sb);
+	    }
             break;
             case 3://////// MULTIPLICATION OF MATRICES.  
             if (c1!=r2)
@@ -112,12 +102,7 @@ void main(int argc,char *argv[])
             if (mpos==1)
             {   mul(r1,r2,c1,c2,a,b,ml);
                 printf("\t\t\tANSWER FOR MATRIX multipliction\n");
-                for (int i=0,j;i<r1;i++) 
-                {  printf("\n");
-                    for (j=0;j<c2;j++)
-                        printf("\t\t\t%f ",ml[i][j]);
-                }
-                printf("\n");
+		Display(r1,c2,ml);
             }
             break;
             case 4: //DISPLAY THE MATRICES
@@ -226,7 +211,7 @@ void main(int argc,char *argv[])
                             ad[z][y]=1;
                     }
                 inverse(r1,a,ad);
-                Display(r1,c1,ad);
+		Display(r1,c1,ad);
             }
             if (r2!=c2)
                 printf("2nd MATRIX IS NOT SQUARE MATRIX.");
@@ -239,8 +224,8 @@ void main(int argc,char *argv[])
                             sb[z][y]=1;
                     }
                 inverse(r2,b,sb);
-                Display(r2,c2,sb);
-            }
+		Dispaly(r2,c2,sb);
+	    }
             break;
             case 12://sys
             solve();

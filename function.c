@@ -5,16 +5,13 @@ THIS FILE CONTAINS FUNCTIONS OF : ADDATION,SUBTRACTION,MULTIPLATION,DISPLAY,TRAC
 */
 
 #include"header.h"
-
 ////////////////////// ADDATION FUN
 void add(int r1,int c1,float **a,float **b,float **c)
 {int i,j;
     for (i=0;i<r1;i++)
         for (j=0;j<c1;j++)
             c[i][j]=a[i][j]+b[i][j];
-
 }
-
 /////////////////////// SUBTRACTION FUN
 void sub(int r1,int c1,float **a,float **b,float **c)
 {int i,j;
@@ -22,7 +19,6 @@ void sub(int r1,int c1,float **a,float **b,float **c)
         for (j=0;j<c1;j++)
             c[i][j]=a[i][j]-b[i][j];
 }
-
 ////////////////////// MULTIPLATION FUN
 void mul(int r1,int r2,int c1,int c2, float **a,float **b,float **c)
 { int i,j,k;float s=0;
@@ -34,7 +30,6 @@ void mul(int r1,int r2,int c1,int c2, float **a,float **b,float **c)
             c[i][k]=s;s=0;
         }
 }
-
 ////////////////////// TO DISPLAY MATRIX
 void Display(int r1,int c1,float **a)
 {
@@ -43,17 +38,15 @@ void Display(int r1,int c1,float **a)
     {   printf("\n");
 
         for(j=0;j<c1;j++)
-            printf("%f ",a[i][j]);
+            printf("\t\t\t%.2f ",a[i][j]);
     }
     printf("\n");
 }
-
 ////////////////TO EDIT A GIVEN MATRIX  
 void  edit(int r,int c,float **a,float x)
 {
     a[r-1][c-1]=x;
 }
-
 ///////////////TRACE OF A MATRIX
 float trace(int r,int c,float **a )
 {   int i,j;
@@ -67,18 +60,16 @@ float trace(int r,int c,float **a )
         tr+=a[i][i];// ADDS ALL ENTRIES IN DIAGONAL.
     return tr;
 }
-
 //////TRANSPOSE OF A MATRIX
 void transpose(int r,int c,float **a)
 {int i,j;
     for(i=0;i<r;i++)
     { printf("\n");
         for(j=0;j<c;j++)
-            printf("%f ",a[j][i]);
+            printf("\t\t\t%f ",a[j][i]);
     }
     printf("\n");
 }
-
 /////// SYMMETRIC 
 void symmetric(int r,int c,float **a)
 { int i,j;
@@ -95,7 +86,6 @@ void symmetric(int r,int c,float **a)
     else
         printf(" NOT A SYMMETRIC MATRIX.\n");
 }
-
 /////// SKEW SYMMETRIC 
 void skew_symmetric(int r,int c,float **a)
 { int i,j;
@@ -112,8 +102,6 @@ void skew_symmetric(int r,int c,float **a)
     else
         printf("\t\t\t\t\t\t\t:NOT A SKEW SYMMETRIC MATRIX.\n");
 }
-
-
 ////// IDEMPOTENT MATRIX
 void idempotent(int r,float **a)
 { int i,j;
@@ -150,7 +138,6 @@ void identity(int r,int c,float **a)
     else
         printf("\t\t\t\t\t\t\t:NOT A IDENTITY MATRIX.\n");
 }
-
 ///// CHECKS GIVEN MATRIX IS UPPER TRIANGULAR OR NOT
 void up_triangle(int r,int c,float **a)
 {int i,j;
@@ -168,7 +155,6 @@ void up_triangle(int r,int c,float **a)
         printf("\t\t\t\t\t\t\t:NOT A UPPER TRIANGULAR MATRIX.\n");
 
 }
-
 ///// CHECKS GIVEN MATRIX IS LOWER TRIANGULAR OR NOT
 void lower_triangle(int r,int c,float **a)
 {int i,j;
@@ -184,9 +170,4 @@ void lower_triangle(int r,int c,float **a)
         printf("\t\t\t\t\t\t\t:LOWER TRIANGULAR MATRIX.\n");
     else
         printf("\t\t\t\t\t\t\t:NOT A LOWER TRIANGULAR MATRIX.\n");
-
 }
-
-
-
-
